@@ -1,92 +1,191 @@
-from easygui import*
+from easygui import *
 import sys
- 
+sum=0
 while 1:
- msgbox("welcome to ebazaar")
+    
+    msgbox("Hello dear customer , WELCOME TO AMAZEKART !")
 
- msg="choose the section"
- title="shopping choices"
- choices=["electronics","clothes","footwear"]
- choice=choicebox(msg,title,choices)
- msgbox("you choose:"+str(choice))
+    msg ="What are you looking for?"
+    title = "AMAZEKART"
+    choices = ["SHOES", "TSHIRTS", "MOBILES"]
+    choice = indexbox(msg, title, choices)
+    
+    if choice==0:
+       msg="Choose the following Brands"
+       title="SHOES"
+       choices = ['NIKE','BATA','PUMA']
+       choice= indexbox(msg,title,choices)
+       if choice==0:
+            msg="Choose the following vendors"
+            title="NIKE"
+            choices = ['PAPPU SALES','TAPPU SALES','BAPPU SALES']
+            choice= indexbox(msg,title,choices)
+            if choice==0:
+             sum+=500
+             textbox(sum,"your total bill is")
+            
+            elif choice==1:
+             sum+=700
+             textbox(sum,"your total bill is")
+           
+            elif choice==2:
+             sum+=900
+             textbox(sum,"your total bill is")
+       
+       elif choice==1:
+            msg="Choose the following vendors"
+            title="BATA"
+            choices = ['PAPPU SALES','TAPPU SALES','BAPPU SALES']
+            choice= indexbox(msg,title,choices)
+            if choice==0:
+             sum+=500
+             textbox(sum,"your total bill is")
+            
+            elif choice==1:
+             sum+=700
+             textbox(sum,"your total bill is")
+           
+            elif choice==2:
+             sum+=900
+             textbox(sum,"your total bill is")
+  
+       elif choice==2:
+            msg="Choose the following vendors"
+            title="PUMA"
+            choices = ['PAPPU SALES','TAPPU SALES','BAPPU SALES']
+            choice= indexbox(msg,title,choices)
+            if choice==0:
+             sum+=500
+             textbox(sum,"your total bill is")
+            
+            elif choice==1:
+             sum+=700
+             textbox(sum,"your total bill is")
+           
+            elif choice==2:
+             sum+=900
+             textbox(sum,"your total bill is")
+     
+      
+    if choice==1:
+       msg="Choose the following Brands"
+       title="TSHIRTS"
+       choices = ['NIKE','ADIDAS','PUMA']
+       choice= indexbox(msg,title,choices)
+       if choice==0:
+            msg="Choose the following vendors"
+            title="NIKE"
+            choices = ['PAPPU SALES','TAPPU SALES','BAPPU SALES']
+            choice= indexbox(msg,title,choices)
+            if choice==0:
+             sum+=5000
+             textbox(sum,"your total bill is")
+            
+            elif choice==1:
+             sum+=7000
+             textbox(sum,"your total bill is")
+           
+            elif choice==2:
+             sum+=9000
+             textbox(sum,"your total bill is")
+       
+       elif choice==1:
+            msg="Choose the following vendors"
+            title="ADIDAS"
+            choices = ['PAPPU SALES','TAPPU SALES','BAPPU SALES']
+            choice= indexbox(msg,title,choices)
+            if choice==0:
+             sum+=5005
+             textbox(sum,"your total bill is")
+            
+            elif choice==1:
+             sum+=7006
+             textbox(sum,"your total bill is")
+           
+            elif choice==2:
+             sum+=9007
+             textbox(sum,"your total bill is")
+  
+       elif choice==2:
+            msg="Choose the following vendors"
+            title="PUMA"
+            choices = ['PAPPU SALES','TAPPU SALES','BAPPU SALES']
+            choice= indexbox(msg,title,choices)
+            if choice==0:
+             sum+=5000
+             textbox(sum,"your total bill is")
+            
+            elif choice==1:
+             sum+=7000
+             textbox(sum,"your total bill is")
+           
+            elif choice==2:
+             sum+=9000
+             textbox(sum,"your total bill is")
 
- if choice=="electronics":
-    msg="choose ur electronic gadget"
-    title="electronic choices"
-    choices1=["mobile","dryer"]
-    choice=choicebox(msg,title,choices)
-    msgbox("you chose"+str(choice1))
 
+    if choice==2:
+       msg="Choose the following Brands"
+       title="MOBILE PHONES"
+       choices = ['APPLE','GOOGLE','SAMSUNG']
+       choice= indexbox(msg,title,choices)
+       if choice==0:
+            msg="Choose the following vendors"
+            title="APPLE"
+            choices = ['PAPPU SALES','TAPPU SALES','BAPPU SALES']
+            choice= indexbox(msg,title,choices)
+            if choice==0:
+             sum+=85000
+             textbox(sum,"your total bill is")
+            
+            elif choice==1:
+             sum+=88000
+             textbox(sum,"your total bill is")
+           
+            elif choice==2:
+             sum+=90000
+             textbox(sum,"your total bill is")
+       
+       elif choice==1:
+            msg="Choose the following vendors"
+            title="GOOGLE"
+            choices = ['PAPPU SALES','TAPPU SALES','BAPPU SALES']
+            choice= indexbox(msg,title,choices)
+            if choice==0:
+             sum+=75000
+             textbox(sum,"your total bill is")
+            
+            elif choice==1:
+             sum+=70000
+             textbox(sum,"your total bill is")
+            
+            elif choice==2:
+             sum+=78000
+             textbox(sum,"your total bill is")
+  
+       elif choice==2:
+            msg="Choose the following vendors"
+            title="SAMSUNG"
+            choices = ['PAPPU SALES','TAPPU SALES','BAPPU SALES']
+            choice= indexbox(msg,title,choices)
+            if choice==0:
+             sum+=15500
+             textbox(sum,"your total bill is")
+            
+            elif choice==1:
+             sum+=17000
+             textbox(sum,"your total bill is")
+           
+            elif choice==2:
+             sum+=19000
+             textbox(sum,"your total bill is")
+     
+       
+          
 
-
-   if choice1=="mobile":
-      msg="choose ur mobile"
-      title="mobiles"
-      choices11=["samsung a6 15,000";"SAMSUNG J6 12000";"REDME 18000"]
-      choice=choicebox(msb,title,choices)
-      msgbox("you chose"+str(choice11))
-
-
-   elif choice1=="dryer":
-      msg="choose ur dryer"
-      title="dryers"
-      choices12=["hp dryer 15,000";"godrej 5000";"elle 3000"]
-      choice=choicebox(msb,title,choices)
-      msgbox("you chose"+str(choice12))
-
-
-
- elif choice=="clothes":
-    msg="choose clothes"
-    title="clothes choices"
-    choice2=["shirts","jeans"]
-    choices=choicebox(msg,title,choices)
-    msgbox("you chose"+str(choice2))
-
-
-   
-   if choice2=="shirts":
-      msg="choose ur shirt"
-      title="shirts"
-      choices21=["lee 5000";"vermoda 4000";"you 8000"]
-      choice=choicebox(msb,title,choices)
-      msgbox("you chose"+str(choice21))
-
-
-   elif choice2=="jeans":
-      msg="choose ur jeans"
-      title="jeans"
-      choices22=["denim 15,000";"jeolous 5000";"leec 8000"]
-      choice=choicebox(msb,title,choices)
-      msgbox("you chose"+str(choice22))
-
-
-
- elif choice=="footwear":
-    msg="choose footwear"
-    title="footwear choices"
-    choice3=["shoes","sandals"]
-    choices=choicebox(msg,title,choices)
-    msgbox("you chose"+str(choice3))
-
-   
-  if choice3=="shoes":
-     msg="choose ur shoes"
-     title="shoes"
-     choices31=["adidas 5000";"nike 4000";"bata 8000"]
-     choice=choicebox(msb,title,choices)
-     msgbox("you chose"+str(choice32))
-  elif choice3=="sandals":
-     msg="choose ur sandals"
-     title="sandals"
-     choices32=["retro 15,000";"metro 5000";"bata 8000"]
-     choice=choicebox(msg,title,choices)
-     msgbox("you chose"+str(choice32))
-
-msg="do u want to continue"
-title="confirmation box"
-choice=ccbox(msg,title)
-if choice==1:
- exit(0)
-elif choice==0:
- msgbox("u have chosen to continue")
+    msg = "Do you want to continue?"
+    title = "Please Confirm"
+    if ccbox(msg, title):    
+        pass 
+    else:
+sys.exit(0)
